@@ -1,0 +1,86 @@
+/* === Painel === */
+
+#page-home {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page-home .painel {
+  margin-top: 30px;
+
+  height: 366px;
+  width: 940px;
+  max-width: 100%;
+
+  border-radius: 30px;
+
+  background-color: #fbdfdb;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-home .painel div {
+  width: 316px;
+  margin-left: 60px;
+
+  align-self: center;
+}
+
+#page-home .painel div h1 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+#page-home .painel div p {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.7;
+}
+
+#page-home .painel img {
+  width: 216px;
+  height: 300px;
+  margin: 66px 100px 0 0;
+}
+
+/* === Cards === */
+
+#page-home main {
+  width: 940px;
+  max-width: 100%;
+}
+
+#page-home main h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#page-home .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#page-home .card img {
+  width: 300px;
+  height: 140px;
+
+  border-radius: 15px;
+}
+
+#page-home .card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#page-home .card p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #777777;
+}
