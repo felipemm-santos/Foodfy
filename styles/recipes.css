@@ -5,7 +5,17 @@
 }
 
 .card {
-  margin-top: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  padding: 5px;
+  border-radius: 15px;
+
+  transition: 300ms;
+}
+
+.card:hover {
+  background-color: #e7e0e0;
 }
 
 .card img {
