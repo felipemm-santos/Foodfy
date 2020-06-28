@@ -15,7 +15,24 @@ body {
   background-color: white;
   font-family: 'Roboto', sans-serif;
   color: var(--primary-color);
-  padding: 30px;
+
+  margin: 30px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  width: 940px;
+  max-width: 100%;
+}
+
+/* === Menu === */
+
+header nav {
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .links a {
@@ -23,18 +40,9 @@ body {
   color: var(--primary-color);
 }
 
-.links a:hover {
-    font-weight: bold;
-}
-
-/* === Menu === */
-header {
-  width: 940px;
-  max-width: 100%;
-}
-
-header nav {
-  display: flex;
+.links a:hover,
+.links .current {
+  font-weight: bold;
 }
 
 header .links #menu {
@@ -48,12 +56,10 @@ header .links #menu a {
 footer {
   margin-top: 50px;
   height: 62px;
-  width: 940px;
 
   background-color: #eeeaea;
 
   display: flex;
-  flex-direction: column;
 
   justify-content: center;
 }
