@@ -3,11 +3,38 @@
     max-width: 100%;
     height: auto;
   }
+
   .card h3 {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
+
   .card p {
-    font-size: 2vw;
+    font-size: 3vw;
+  }
+
+  /* === Recipes Modal */
+  .modal-overlay {
+    padding: 20px;
+  }
+
+  .modal,
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .modal-content h3 {
+    margin-top: 1vw;
+    font-size: 4vw;
+  }
+
+  .modal-content p {
+    margin-top: 1vw;
+    font-size: 3vw;
+  }
+
+  .close-modal {
+    bottom: 1vw;
   }
 }
 
@@ -57,5 +84,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-height: 330px) {
+  .modal {
+    width: 90%;
+    height: 90%;
+  }
+
+  .modal-content,
+  .modal-content img {
+    width: auto;
+    height: 90%;
+  }
+
+  .close-modal {
+    right: 2vw;
+    top: 2vw;
   }
 }
