@@ -99,6 +99,14 @@
     height: 90%;
   }
 
+  .modal-content h1 {
+    font-size: 3vw;
+  }
+
+  .modal-content p {
+    font-size: 2vw;
+  }
+
   .close-modal {
     right: 2vw;
     top: 2vw;
