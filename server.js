@@ -34,7 +34,7 @@ server.get('/recipes', (req, res) => {
 server.get('/recipes/:index', (req, res) => {
   const recipeIndex = req.params.index;
 
-  const recipe = recipes[recipeIndex]
+  const recipe = recipes[recipeIndex];
 
   if (!recipe) {
     return res.status(404).render('not-found');
