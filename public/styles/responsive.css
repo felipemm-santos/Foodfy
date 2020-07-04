@@ -5,36 +5,13 @@
   }
 
   .card h3 {
+    max-width: fit-content;
     font-size: 4vw;
   }
 
   .card p {
+    max-width: fit-content;
     font-size: 3vw;
-  }
-
-  /* === Recipes Modal */
-  .modal-overlay {
-    padding: 20px;
-  }
-
-  .modal,
-  .modal-content img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .modal-content h3 {
-    margin-top: 1vw;
-    font-size: 4vw;
-  }
-
-  .modal-content p {
-    margin-top: 1vw;
-    font-size: 3vw;
-  }
-
-  .close-modal {
-    bottom: 1vw;
   }
 }
 
@@ -75,7 +52,7 @@
     margin: 33px 50px 0 0;
   }
 
-  #page-home main h2 {
+  #page-home h2 {
     text-align: center;
   }
 
@@ -85,30 +62,22 @@
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media (max-height: 330px) {
-  .modal {
-    width: 90%;
-    height: 90%;
+  /* === Not found === */
+  #not-found {
+    max-width: 100%;
+    height: auto;
   }
 
-  .modal-content,
-  .modal-content img {
-    width: auto;
-    height: 90%;
+  #not-found h1 {
+    font-size: 5vw;
   }
 
-  .modal-content h1 {
-    font-size: 3vw;
-  }
-
-  .modal-content p {
-    font-size: 2vw;
-  }
-
-  .close-modal {
-    right: 2vw;
-    top: 2vw;
+  #not-found p {
+    font-size: 4vw;
   }
 }
+
+/* @media (max-height: 330px) {
+  
+} */

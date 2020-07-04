@@ -12,23 +12,25 @@
     </head>
 
     <body>
-        <header>
-            <nav class="links">
-                <div id="logo">
-                    {% block linkLogo %}{% endblock linkLogo %}
-                </div>
+        <div class="page">
+            <header>
+                <nav class="links">
+                    <div id="logo">
+                        {% block linkLogo %}{% endblock linkLogo %}
+                    </div>
 
-                <div id="menu">
-                    {% block linksMenu %}{% endblock linksMenu %}
-                </div>
-            </nav>
-        </header>
+                    <div id="menu">
+                        {% block linksMenu %}{% endblock linksMenu %}
+                    </div>
+                </nav>
+            </header>
 
-        {% block content %}{% endblock content %}
+            {% block content %}{% endblock content %}
 
-        <footer>
-            <p>Todos direitos reservados, receitas Foodfy</p>
-        </footer>
+            <footer>
+                <p>Todos direitos reservados, receitas Foodfy</p>
+            </footer>
+        </div>
 
         {% block scripts %}{% endblock scripts %}
     </body>
