@@ -13,6 +13,28 @@
     max-width: fit-content;
     font-size: 3vw;
   }
+
+  /* Recipe */
+  #recipe img {
+    height: auto;
+  }
+
+  #recipe h1 {
+    font-size: 8vw;
+  }
+
+  #recipe h3 {
+    font-size: 6vw;
+  }
+
+  section h2 {
+    font-size: 7vw;
+  }
+
+  section li,
+  section p {
+    font-size: 5vw;
+  }
 }
 
 @media (max-width: 640px) {
@@ -78,6 +100,13 @@
   }
 }
 
-/* @media (max-height: 330px) {
+@media (max-width: 330px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
   
-} */
+  header .links #menu {
+    margin: 0;
+  }
+}
