@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="styles/recipes.css"/>
+{% endblock styles %}
+
+{% block linkLogo %}
+  <a href="/">
+    <img src="assets/logo.png" alt="Home"/>
+  </a>
+{% endblock linkLogo %}
+
+{% block linksMenu %}
+  <a href="/about">
+    Sobre
+  </a>
+
+  <a class="current" href="#">
+    Receitas
+  </a>
+{% endblock linksMenu %}
+
+{% block content %}
+  <main>
+    <div class="cards">
+      {% for recipe in recipes %}
+        <div class="card">
+          <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
+          <h3>{{recipe.title}}</h3>
+          <p>por
+            {{recipe.author}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/script.js"></script>
+{% endblock scripts %}
