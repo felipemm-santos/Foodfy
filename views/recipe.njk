@@ -32,10 +32,13 @@
     </h3>
 
     <section class="ingredients">
-      
-      <h2>Ingredientes</h2>
 
-      <ul>
+      <div class="wrapper">
+        <h2>Ingredientes</h2>
+        <a>Esconder</a>
+      </div>
+
+      <ul class="content">
         {% for ingredient in recipe.ingredients %}
           <li>{{ingredient}}</li>
         {% endfor %}
@@ -43,20 +46,34 @@
     </section>
 
     <section class="preparation">
-      <h2>Modo de preparação</h2>
-      <ul>
+
+      <div class="wrapper">
+        <h2>Modo de preparação</h2>
+        <a>Esconder</a>
+      </div>
+
+      <ul class="content">
         {% for step in recipe.preparation %}
           <li>{{step}}</li>
         {% endfor %}
       </ul>
     </section>
 
-    <section class="information">
+    <section class="informations">
 
-      <h2>Informações adicionais</h2>
+      <div class="wrapper">
+        <h2>Informações adicionais</h2>
+        <a>Esconder</a>
+      </div>
 
-      <p>{{recipe.information}}</p>
+      <p class="content">
+        {{recipe.information}}
+      </p>
     </section>
 
   </main>
 {% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/recipes.js"></script>
+{% endblock scripts %}

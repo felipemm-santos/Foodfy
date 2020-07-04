@@ -26,9 +26,35 @@ section {
   margin-bottom: 39px;
 }
 
-section h2 {
-  font-size: 24px;
+.hidden {
+  display: none;
+}
+
+section .wrapper {
+  display: flex;
+  align-items: baseline;
   margin-bottom: 20px;
+}
+
+section .wrapper h2 {
+  font-size: 24px;
+}
+
+section .wrapper a {
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #999999;
+
+  font-weight: bold;
+
+  margin-left: 8px;
+
+  cursor: pointer;
+}
+
+.content {
+  transition: 2000ms;
 }
 
 section li,
