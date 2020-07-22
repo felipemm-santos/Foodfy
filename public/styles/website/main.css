@@ -21,17 +21,10 @@ p {
   text-align: justify;
 }
 
-.page {
-  width: 1400px;
-  max-width: 100%;
-
-  padding: 30px;  
-  margin: 30px auto;
-}
-
-.page main {
+main {
   width: 940px;
   max-width: 100%;
+  padding: 30px; 
   margin: auto;  
 }
 
@@ -43,8 +36,11 @@ header nav {
   width: 940px;
   max-width: 100%;
 
-  margin: auto; 
-  margin-bottom: 50px;
+  padding-left: 30px; 
+
+  margin: 30px auto 50px; 
+  /* margin-top: 30px;
+  margin-bottom: 50px; */
 }
 
 .links a {

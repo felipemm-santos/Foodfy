@@ -12,33 +12,31 @@
     </head>
 
     <body>
-        <div class="page">
-            <header>
-                <nav class="links">
-                    <div id="logo">
-                        <a href="/">
-                            <img src="/assets/logo.png" alt="Home"/>
-                        </a>
-                    </div>
+        <header>
+            <nav class="links">
+                <div id="logo">
+                    <a href="/">
+                        <img src="/assets/logo.png" alt="Home"/>
+                    </a>
+                </div>
 
-                    <div id="menu">
-                        <a href="/about">
-                            Sobre
-                        </a>
+                <div id="menu">
+                    <a href="/about">
+                        Sobre
+                    </a>
 
-                        <a href="/recipes">
-                            Receitas
-                        </a>
-                    </div>
-                </nav>
-            </header>
+                    <a href="/recipes">
+                        Receitas
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-            {% block content %}{% endblock content %}
+        {% block content %}{% endblock content %}
 
-            <footer>
-                <p>Todos direitos reservados, receitas Foodfy</p>
-            </footer>
-        </div>
+        <footer>
+            <p>Todos direitos reservados, receitas Foodfy</p>
+        </footer>
 
         {% block scripts %}{% endblock scripts %}
     </body>

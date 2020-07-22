@@ -12,20 +12,17 @@
     </head>
 
     <body>
-        <div class="page">
-            <header>
-                <nav class="links">
-                    <div id="logo">
-                        <a href="/">
-                            <img src="/assets/logo-admin.png" alt="Home"/>
-                        </a>
-                    </div>
-                </nav>
-            </header>
+        <header>
+            <nav class="links">
+                <div id="logo">
+                    <a href="/">
+                        <img src="/assets/logo-admin.png" alt="Home"/>
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-            {% block content %}{% endblock content %}
-
-        </div>
+        {% block content %}{% endblock content %}
 
         {% block scripts %}{% endblock scripts %}
     </body>
