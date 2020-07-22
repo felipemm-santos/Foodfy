@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  margin: 30px auto;
+  /* margin: 30px auto; */
 }
 
 p {
@@ -28,17 +28,31 @@ p {
 }
 
 .page {
+  width: 1400px;
+  max-width: 100%;
+}
+
+.page main {
   width: 940px;
   max-width: 100%;
-
-  padding: 30px;
+  margin: auto;
 }
 
 /* === Menu === */
+header {
+  height: 80px;
+  background-color: #111111;
+
+  margin-bottom: 50px;
+}
 
 header nav {
+  height: 100%;
+  width: 940px;
+  max-width: 100%;
+
   display: flex;
-  margin-bottom: 50px;
+  margin: auto;
 }
 
 .links a {
@@ -49,6 +63,11 @@ header nav {
 .links a:hover,
 .links .current {
   font-weight: bold;
+}
+
+.links #logo {
+  display: flex;
+  align-items: center;
 }
 
 header .links #menu {
