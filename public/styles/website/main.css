@@ -14,13 +14,7 @@
 body {
   background-color: white;
   font-family: 'Roboto', sans-serif;
-  color: var(--primary-color);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin: 30px auto;
+  color: var(--primary-color);  
 }
 
 p {
@@ -28,16 +22,28 @@ p {
 }
 
 .page {
-  width: 940px;
+  width: 1400px;
   max-width: 100%;
 
-  padding: 30px;
+  padding: 30px;  
+  margin: 30px auto;
+}
+
+.page main {
+  width: 940px;
+  max-width: 100%;
+  margin: auto;  
 }
 
 /* === Menu === */
 
 header nav {
-  display: flex;
+  display: flex; 
+
+  width: 940px;
+  max-width: 100%;
+
+  margin: auto; 
   margin-bottom: 50px;
 }
 
