@@ -1,24 +1,8 @@
 {% extends "website/layout.njk" %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/styles/recipe.css"/>
+  <link rel="stylesheet" href="/styles/website/recipe.css"/>
 {% endblock styles %}
-
-{% block linkLogo %}
-  <a href="/">
-    <img src="/assets/logo.png" alt="Logo"/>
-  </a>
-{% endblock linkLogo %}
-
-{% block linksMenu %}
-  <a href="/about">
-    Sobre
-  </a>
-
-  <a class="current" href="/recipes">
-    Receitas
-  </a>
-{% endblock linksMenu %}
 
 {% block content %}
   <main id="recipe">

@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Foodfy</title>
-        <link rel="stylesheet" href="/styles/main.css"/>
+        <title>Foodfy</title>/admin
+        <link rel="stylesheet" href="/styles/admin/main.css"/>
 
         {% block styles %}{% endblock styles %}
 
-        <link rel="stylesheet" href="/styles/responsive.css"/>
+        <link rel="stylesheet" href="/styles/admin/responsive.css"/>
     </head>
 
     <body>
@@ -16,20 +16,15 @@
             <header>
                 <nav class="links">
                     <div id="logo">
-                        {% block linkLogo %}{% endblock linkLogo %}
-                    </div>
-
-                    <div id="menu">
-                        {% block linksMenu %}{% endblock linksMenu %}
-                    </div>
+                        <a href="/">
+                            <img src="/assets/logo-admin.png" alt="Home"/>
+                        </a>
+                    </div>                    
                 </nav>
             </header>
 
             {% block content %}{% endblock content %}
-
-            <footer>
-                <p>Todos direitos reservados, receitas Foodfy</p>
-            </footer>
+            
         </div>
 
         {% block scripts %}{% endblock scripts %}

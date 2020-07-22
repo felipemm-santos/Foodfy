@@ -15,6 +15,6 @@ routes.get("/admin", (req, res) => res.redirect("/admin/recipes"));
 routes.get("/admin/recipes", admin.index); // Mostrar a lista de receitas
 
 
-routes.use((req, res) => res.status(404).render('not-found'));
+routes.use((req, res) => res.status(404).render('website/not-found'));
 
 module.exports = routes;

@@ -1,0 +1,113 @@
+@media (max-width: 900px) {
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    max-width: fit-content;
+    font-size: 4vw;
+  }
+
+  .card p {
+    max-width: fit-content;
+    font-size: 3vw;
+  }
+
+  /* Recipe */
+  #recipe img {
+    height: auto;
+  }
+
+  #recipe h1 {
+    font-size: 8vw;
+  }
+
+  #recipe h3 {
+    font-size: 6vw;
+  }
+
+  section h2 {
+    font-size: 7vw;
+  }
+
+  section li,
+  section p {
+    font-size: 5vw;
+    line-height: 9vw;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Navigation */
+  header nav {
+    justify-content: center;
+  }
+
+  header .links #menu {
+    margin-left: 15px;
+  }
+
+  /* === Home === */
+
+  #page-home .painel {
+    height: auto;
+  }
+
+  #page-home .painel div {
+    margin: 20px;
+  }
+
+  #page-home .painel div h1 {
+    font-size: 5vw;
+    line-height: normal;
+  }
+
+  #page-home .painel div p {
+    font-size: 4vw;
+    line-height: normal;
+  }
+
+  #page-home .image-container img {
+    max-width: 100%;
+    height: auto;
+
+    margin: 33px 50px 0 0;
+  }
+
+  #page-home h2 {
+    text-align: center;
+  }
+
+  /* === Recipes === */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* === Not found === */
+  #not-found {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #not-found h1 {
+    font-size: 5vw;
+  }
+
+  #not-found p {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 330px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .links #menu {
+    margin: 15px 0 0;
+  }
+}
