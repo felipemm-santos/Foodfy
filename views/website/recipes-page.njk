@@ -9,10 +9,14 @@
     <div class="cards">
       {% for recipe in recipes %}
         <div class="card">
-          <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
-          <h3>{{recipe.title}}</h3>
-          <p>por
-            {{recipe.author}}</p>
+          <div class="image-container">
+            <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
+            </div>
+          <div class="description">
+            <h3>{{recipe.title}}</h3>
+            <p>por
+              {{recipe.author}}</p>
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -20,5 +24,5 @@
 {% endblock content %}
 
 {% block scripts %}
-  <script src="/scripts/script.js"></script>
+  <script src="/scripts/recipes-website.js"></script>
 {% endblock scripts %}
