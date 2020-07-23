@@ -13,7 +13,7 @@ routes.get('/recipes/:index', website.show);
 
 routes.get("/admin", (req, res) => res.redirect("/admin/recipes"));
 routes.get("/admin/recipes", admin.index);
-
+routes.get("/admin/recipes/:index", admin.show)
 
 routes.use((req, res) => res.status(404).render('website/not-found'));
 
