@@ -1,0 +1,46 @@
+main h1 {
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  gap: 20px;
+}
+
+.card {  
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  gap: 20px;
+}
+
+.image-container img {  
+  max-width: 100%;
+
+  height: 80px;
+
+  border-radius: 15px;
+}
+
+.description h3 {
+  font-size: 18px;
+}
+
+.description p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777777;
+}
+
+.description a {
+  text-decoration: none;
+  color: #6558c3;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  cursor: pointer;
+}

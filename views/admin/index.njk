@@ -1,7 +1,7 @@
 {% extends "admin/layout.njk" %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/styles/admin/recipes.css">
+    <link rel="stylesheet" href="/styles/admin/index.css">
 {% endblock styles %}
 
 {% block content %}
@@ -10,12 +10,29 @@
         <div class="cards">
             {% for recipe in recipes %}
                 <div class="card">
-                    <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
-                    <h3>{{recipe.title}}</h3>
-                    <p>por
-                        {{recipe.author}}</p>
+                    <div class="image-container">
+                        <img src="{{recipe.image}}" alt="{{recipe.title}}"/>
+                    </div>
+                    <div class="description">
+                        <h3>
+                            {{recipe.title}}
+                        </h3>
+                        <p>
+                            por
+                            {{recipe.author}}
+                        </p>
+                        <p>
+                            <a>
+                                Visualizar
+                            </a>
+                        </p>
+                    </div>
                 </div>
             {% endfor %}
         </div>
     </main>
 {% endblock content %}
+
+{% block scripts %}
+    <script src="/scripts/recipes-admin.js"></script>
+{% endblock scripts %}
