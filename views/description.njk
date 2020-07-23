@@ -1,0 +1,51 @@
+<img src="{{recipe.image}}" alt="{{recipe.title}}">
+
+<h1>{{recipe.title}}</h1>
+<h3>
+    por
+    {{recipe.author}}
+</h3>
+
+<section class="ingredients">
+
+    <div class="wrapper">
+        <h2>Ingredientes</h2>
+        <a>Esconder</a>
+    </div>
+
+    <ul class="content">
+        {% for ingredient in recipe.ingredients %}
+            <li>{{ingredient}}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="preparation">
+
+    <div class="wrapper">
+        <h2>Modo de preparação</h2>
+        <a>Esconder</a>
+    </div>
+
+    <ul class="content">
+        {% for step in recipe.preparation %}
+            <li>{{step}}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="informations">
+
+    <div class="wrapper">
+        <h2>Informações adicionais</h2>
+        <a>Esconder</a>
+    </div>
+
+    <p class="content">
+        {{recipe.information}}
+    </p>
+</section>
+
+{% block scripts %}
+    <script src="/scripts/recipe-description.js"></script>
+{% endblock scripts %}
