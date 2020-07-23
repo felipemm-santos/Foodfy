@@ -21,7 +21,7 @@ exports.show = (req, res) => {
   const recipe = recipes[recipeIndex];
 
   if (!recipe) {
-    return res.status(404).render('not-found');
+    return res.status(404).render('website/not-found');
   }
   return res.render('website/recipe', { recipe });
 };
