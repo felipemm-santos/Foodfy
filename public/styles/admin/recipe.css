@@ -1,0 +1,18 @@
+main > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+main > div a{
+    font-size: 16px;
+    font-weight: bold;
+
+    text-decoration: none;
+    background-color: #6558C3;
+    color: white;
+    
+    padding: 9px 20px;
+    border-radius: 4px;
+}

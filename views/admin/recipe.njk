@@ -2,10 +2,19 @@
 
 {% block styles %}
   <link rel="stylesheet" href="/styles/website/recipe.css"/>
+  <link rel="stylesheet" href="/styles/admin/recipe.css"/>
 {% endblock styles %}
 
 {% block content %}
   <main id="recipe">
+    <div>
+      <h2>
+        Reeceita:{{recipe.title}}
+      </h2>
+      <a href="">
+        Editar receita
+      </a>
+    </div>
     {% include "description.njk"%}
   </main>
 {% endblock content %}
