@@ -87,4 +87,6 @@ header .links #menu a {
 
   padding: 9px 20px;
   border-radius: 4px;
+
+  cursor: pointer;
 }
