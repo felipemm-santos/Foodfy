@@ -1,8 +1,7 @@
-{% extends "website/layout.njk" %}
+{% extends "admin/layout.njk" %}
 
 {% block styles %}
   <link rel="stylesheet" href="/styles/website/recipe.css"/>
-  <link rel="stylesheet" href="/styles/admin/recipe.css"/>
 {% endblock styles %}
 
 {% block content %}
@@ -11,7 +10,7 @@
       <h2>
         Reeceita:{{recipe.title}}
       </h2>
-      <a href="" class="button">
+      <a href="/admin/recipes/{{recipe.index}}/edit" class="button">
         Editar receita
       </a>
     </div>

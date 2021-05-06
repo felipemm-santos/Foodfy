@@ -13,10 +13,16 @@ exports.show = (req, res) => {
   const recipes = data.recipes;
   const recipeIndex = req.params.index;
 
-  const recipe = recipes[recipeIndex];
-  if (!recipe) {
+  const foundRecipe = recipes[recipeIndex];
+  if (!foundRecipe) {
     return res.status(404).render('website/not-found');
   }
+
+  const recipe = {
+    ...foundRecipe,
+    index: recipeIndex
+  }
+
 
   return res.render('admin/recipe', { recipe });
 };
@@ -47,3 +53,20 @@ exports.post = (req, res) => {
     return res.redirect('/admin/recipes');
   });
 };
+
+exports.edit = (req, res) => {
+  const recipes = data.recipes;
+  const recipeIndex = req.params.index;
+
+  const recipe = recipes[recipeIndex];
+
+  if (!recipe) {
+    return res.status(404).render('website/not-found');
+  }
+
+  return res.render('admin/edit', { recipe });
+}
+
+exports.put = (req, res) => {
+
+}

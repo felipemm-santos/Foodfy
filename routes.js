@@ -15,8 +15,11 @@ routes.get("/admin", (req, res) => res.redirect("/admin/recipes"));
 routes.get("/admin/recipes", admin.index);
 routes.get("/admin/recipes/create", admin.create)
 routes.get("/admin/recipes/:index", admin.show)
+routes.get("/admin/recipes/:index/edit", admin.edit)
 
 routes.post("/admin/recipes", admin.post)
+// routes.put("/admin/recipes", recipes.put)
+// routes.delete("/admin/recipes", recipes.delete)
 
 routes.use((req, res) => res.status(404).render('website/not-found'));
 
