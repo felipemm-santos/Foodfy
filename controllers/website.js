@@ -1,7 +1,7 @@
 const data = require('../data');
 const recipes = data.recipes
 
-exports.index = (req, res) => {
+exports.index = (req, res) => {  
   return res.render('website/index', {
     recipes: recipes.slice(0, 6),
   });

@@ -1,12 +1,34 @@
-const fs = require('fs');
-const data = require('../data.json');
+const fs = require("fs");
+const data = require("../data.json");
 
-exports.index = (req, res) => {
-  return res.render('admin/index', { recipes: data.recipes });
+exports.index = (req, res) => {  
+  return res.render("admin/index", { recipes: data.recipes });
 };
 
 exports.create = (req, res) => {
-  return res.render('admin/create');
+  return res.render("admin/create");
+};
+
+exports.post = (req, res) => {
+  const Keys = Object.keys(req.body);
+
+  for (const key of Keys) {
+    // req.body.key == ''
+    if (req.body[key] == "") {
+      return res.send("Por favor , preencha todos os campos");
+    }
+  }  
+
+  const index = data.recipes.length;
+  req.body.index = index;
+
+  data.recipes.push(req.body);
+
+  fs.writeFile("./data.json", JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.send("Write file error!");
+
+    return res.redirect("/admin/recipes");
+  });
 };
 
 exports.show = (req, res) => {
@@ -15,43 +37,15 @@ exports.show = (req, res) => {
 
   const foundRecipe = recipes[recipeIndex];
   if (!foundRecipe) {
-    return res.status(404).render('website/not-found');
+    return res.status(404).render("website/not-found");
   }
 
   const recipe = {
     ...foundRecipe,
-    index: recipeIndex
-  }
+    index: recipeIndex,
+  };
 
-
-  return res.render('admin/recipe', { recipe });
-};
-
-exports.post = (req, res) => {
-  const Keys = Object.keys(req.body);
-
-  for (const key of Keys) {
-    // req.body.key == ''
-    if (req.body[key] == '') {
-      return res.send('Por favor , preencha todos os campos');
-    }
-  }
-
-  lastRecipe = data.recipes[data.recipes.length - 1];
-
-  if (lastRecipe) {
-    req.body.id = lastRecipe.id + 1;
-  } else {
-    req.body.id = 1;
-  }
-
-  data.recipes.push(req.body);
-
-  fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
-    if (err) return res.send('Write file error!');
-
-    return res.redirect('/admin/recipes');
-  });
+  return res.render("admin/recipe", { recipe });
 };
 
 exports.edit = (req, res) => {
@@ -61,12 +55,50 @@ exports.edit = (req, res) => {
   const recipe = recipes[recipeIndex];
 
   if (!recipe) {
-    return res.status(404).render('website/not-found');
+    return res.status(404).render("website/not-found");
   }
 
-  return res.render('admin/edit', { recipe });
-}
+  return res.render("admin/edit", { recipe });
+};
 
 exports.put = (req, res) => {
+  const recipes = data.recipes;
 
-}
+  const { index } = req.body;
+  const foundRecipe = recipes[index];
+
+  if (!foundRecipe) {
+    return res.send("Recipe not found!");
+  }
+
+  const recipe = {
+    ...foundRecipe,
+    ...req.body,
+  };
+
+  data.recipes[index] = recipe;
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.sned("Write file error !");
+
+    return res.redirect(`/admin/recipes/${index}`);
+  });
+};
+
+exports.delete = (req, res) => {
+  recipes = data.recipes;
+
+  const { index } = req.body;
+
+  const filteredRecipes = data.recipes.filter(
+    (recipe) => recipe.index != index
+  ); 
+
+  data.recipes = filteredRecipes;
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.send("Write file error!");
+
+    return res.redirect("/admin/recipes");
+  });
+};

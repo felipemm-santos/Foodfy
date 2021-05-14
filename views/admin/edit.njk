@@ -1,54 +1,35 @@
 {% extends "admin/layout.njk" %}
-
 {% block styles %}
     <link rel="stylesheet" href="/styles/admin/form.css">
-{% endblock styles %}
-
-{% block content %}
-    <main>
-        <form method="POST" action="/admin/recipes?_method=PUT">
+    {% endblock styles %}
+    {% block content %}
+        <main>
             <div class="wrapper">
                 <h2>Criando Receita</h2>
-                <button type="submit">
-                    Salvar receita
-                </button>
-            </div>
-            <div>
-                <h3>Imagem da receita</h3>
-                <input type="url" name="image" placeholder="http://">
-            </div>
-            <div>
-                <h3>Nome da receita</h3>
-                <input type="text" name="title">
-            </div>
-            <div>
-                <h3>Autor</h3>
-                <input type="text" name="author">
-            </div>
-            <div id="ingredients">
-                <h3>Ingredientes</h3>
-                <div>
-                    <input type="text" name="ingredients[]">
+
+                <div class="buttons">
+                    <button type="submit" form="form-delete">
+                        Deletar
+                    </button>
+                    
+                    <button type="submit" form="form-edit">
+                        Salvar receita
+                    </button>
                 </div>
             </div>
-            <button type="button" class="add-ingredient">
-                Adicionar novo ingrediente
-            </button>
-            <div id="preparation">
-                <h3>Modo de preparo</h3>
-                <div>
-                    <input type="text" name="preparation[]">
-                </div>
-            </div>
-            <button type="button" class="add-step">
-                Adicionar novo passo
-            </button>
-            <div>
-                <h3>
-                    Informações adicionais
-                </h3>
-                <textarea name="information"></textarea>
-            </div>
-        </form>
+            
+            <form id="form-delete" method="POST" action="/admin/recipes?_method=DELETE">            
+                <input type="hidden" name="index" value="{{ recipe.index}}">                
+            </form>
+
+            <form id="form-edit" method="POST" action="/admin/recipes?_method=PUT">
+                {% include 'admin/fields.njk' %}
+
+                <input type="hidden" name="index" value="{{ recipe.index}}">       
+             </form>
     </main>
 {% endblock content %}
+
+{% block scripts %}
+    <script src="/scripts/recipe-form.js"></script>
+{% endblock scripts %}
